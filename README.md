@@ -20,7 +20,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This application displays a correctly formatted JSON object. The user can select the keys from this JSON object to return the key’s path and value.
 
-## How it works?
+## How does it work?
 
 The JSON object is loaded in `page.tsx` and passed to `DisplayJson.tsx` to be displayed.
 
