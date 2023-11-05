@@ -16,22 +16,12 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Explainations
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This application displays a correctly formatted JSON object. The user can select the keys from this JSON object to return the key’s path and value.
 
-## Learn More
+## How it works?
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# heyflow-json-explorer
+The JSON object is loaded in `page.tsx` and passed to `DisplayJson.tsx` to be displayed.
+The component `DisplayJson.tsx` loops through the JSON object with the function `formatJson()` and, if enconters an object (or an array), loops througs this object with a recursive call to the function `formatJson()`, until a simple value (string, number, boolean or null) is found.
+When a simple value is found, The value is displayed thanks to the componnent `JsonElement.tsx`. The key of this value is clickable and displays the path and the value of the key in the `DisplayProperty.tsx` component.

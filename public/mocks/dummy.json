@@ -10,10 +10,20 @@
       "hasError": false
     }
   ],
+  "array": [1, 2, 3],
+  "arrayOfArray": [
+    [1, 2, 3],
+    [1, 2, 3]
+  ],
   "field": {
     "id": "4c212130",
     "prop": "iban",
-    "value": "DE81200505501265402568",
+    "value": {
+      "id": "4c212130",
+      "prop": "iban",
+      "value": "DE81200505501265402568",
+      "hasError": false
+    },
     "hasError": false
   }
 }
